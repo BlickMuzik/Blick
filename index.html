@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blick Music Distribution</title>
+<link rel="stylesheet" href="style.css">
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="assets/mic.png" alt="Blick Logo" width="50">
+        <span>Blick</span>
+    </div>
+    <nav>
+        <a href="#upload">Upload</a>
+        <a href="#songs">My Songs</a>
+        <a href="#account" id="loginBtn">Login</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Distribute Your Music Worldwide</h1>
+    <p>Upload once, and get your songs on Spotify, Apple Music, Deezer, and more.</p>
+</section>
+
+<section id="upload">
+    <h2>Upload Your Music</h2>
+    <form id="uploadForm">
+        <input type="text" placeholder="Artist Name" required>
+        <input type="text" placeholder="Song Title" required>
+        <input type="text" placeholder="Album Name" required>
+        <input type="text" placeholder="Genre" required>
+        <input type="file" id="songFile" accept=".mp3,.wav" required>
+        <input type="file" id="coverFile" accept=".jpg,.png" required>
+        <button type="submit">Upload & Pay</button>
+    </form>
+    <div id="message"></div>
+</section>
+
+<section id="songs">
+    <h2>My Songs</h2>
+    <div id="songList" class="song-grid"></div>
+</section>
+
+<section id="account">
+    <h2>Account</h2>
+    <button id="logoutBtn">Logout</button>
+</section>
+
+<footer>
+    <p>&copy; 2026 Blick Music Distribution. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
